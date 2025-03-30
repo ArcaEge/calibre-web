@@ -41,6 +41,8 @@ TRANSLATIONS_DIR    = os.path.join(BASE_DIR, 'cps', 'translations')
 DEFAULT_CACHE_DIR   = os.path.join(BASE_DIR, 'cps', 'cache')
 CACHE_DIR           = os.environ.get('CACHE_DIR', DEFAULT_CACHE_DIR)
 
+GMAIL_USE_BROWSER   = bool(int(os.environ.get('CALIBRE_GMAIL_USE_BROWSER', '1')))
+
 if HOME_CONFIG:
     home_dir = os.path.join(os.path.expanduser("~"), ".calibre-web")
     if not os.path.exists(home_dir):
